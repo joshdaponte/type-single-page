@@ -2,122 +2,141 @@
   src: url("fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.woff2") format("woff2");
   font-family: "Fraunces";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 100 900;
 }
 
-body{
-  background-color: pink;
-  font-family: "Fraunces";
-}
-/* how the page wrapper will appear on mobile */
-.page-wrapper{
-    /* where to change the width of the columns on desktop view */
-    width: min(100% - 3rem, 95ch);
-    margin-inline: auto;
-}
-/* how the page wrapper appears on desktop */
-
-@media only screen and (min-width:800px){
-.page-wrapper{
-display: grid;
-grid-gap: 25px;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: auto;
-grid-template-areas: 
-    "v h"
-    "a a";
+body {
+  margin: 0;
+  background-color: #6C345A;
+  color: #FFC3C3;
+  font-family: "Fraunces", serif;
 }
 
-#history {
-grid-area: h;
-background-color: lightcoral;
+.page-wrapper {
+  width: min(100% - 3rem, 95ch);
+  margin-inline: auto;
+  padding-block: 2rem;
 }
 
-#variations{
-grid-area: v;
+@media only screen and (min-width: 800px) {
+  .page-wrapper {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "h v"
+      "a a";
+  }
+
+  #history {
+    grid-area: h;
+  }
+
+  #variations {
+    grid-area: v;
+  }
+
+  #alphabet {
+    grid-area: a;
+  }
 }
 
+#history,
+#variations,
 #alphabet {
-grid-area: a;
-}
-}
-/* CSS for the footer */
-footer{
-    background-color: rgb(138, 21, 21);
-    height:200px;
+  padding: 1.5rem;
+  border-radius: 16px;
 }
 
-/* font styling area */
-h2{
-    color: firebrick;
-    font-variation-settings: "opsz" 16, "wght" 900, "SOFT" 0, "WONK" 0;
+footer {
+  background-color: #311A25;
+  height: 200px;
 }
 
-h3{
-    font-weight:20; 
-    text-align: center;
-    font-size: 5em;
-    animation: weightChange 7s infinite;
+h2 {
+  color: #FFC3C3;
+  font-variation-settings: "opsz" 16, "wght" 900, "SOFT" 0, "WONK" 0;
 }
 
-@keyframes weightChange {
-    0%, 100%{
-        font-variation-settings: "opsz" 1, "wght" 200, "SOFT" 100, "WONK" 1;
-    }
-    50%{font-variation-settings: "opsz" 16, "wght" 900, "SOFT" 0, "WONK" 0;
-    }
+h3 {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 0.95;
+  animation: heroChange 7s infinite ease-in-out;
 }
-/* animations for the variations section */
-.weight{
-    animation: weightVariations 5s infinite;
+
+.hero {
+  padding: 4rem 1rem 2rem;
 }
+
+.hero h3:nth-child(2) {
+  opacity: 0.65;
+}
+
+@keyframes heroChange {
+  0%, 100% {
+    font-variation-settings: "opsz" 16, "wght" 200, "SOFT" 0, "WONK" 0;
+  }
+  50% {
+    font-variation-settings: "opsz" 72, "wght" 900, "SOFT" 100, "WONK" 1;
+  }
+}
+
+.weight {
+  animation: weightVariations 5s infinite ease-in-out;
+}
+
 @keyframes weightVariations {
-    0%, 100%{
-        font-variation-settings: "opsz" 1, "wght" 200, "SOFT" 100, "WONK" 1;
-    }
-    50%{font-variation-settings: "opsz" 16, "wght" 900, "SOFT" 0, "WONK" 0;
-    }
-}
-/* where the animation is for the width change */
-.width{
-    animation: widthVariations 5s infinite;
-}
-@keyframes widthVariations {
-    0%, 100%{
-        font-variation-settings: "opsz" 1, "wght" 200, "SOFT" 0, "WONK" 1;
-    }
-    50%{font-variation-settings: "opsz" 16, "wght" 200, "SOFT" 100, "WONK" 0;
-    }
+  0%, 100% {
+    font-variation-settings: "opsz" 16, "wght" 200, "SOFT" 0, "WONK" 0;
+  }
+  50% {
+    font-variation-settings: "opsz" 16, "wght" 900, "SOFT" 0, "WONK" 0;
+  }
 }
 
-h5{
-    font-size:40px;
-    color:blue;
-    margin:15px;
+.size {
+  animation: sizeVariations 5s infinite ease-in-out;
 }
 
-/* variable font that changes on hover */
-.variable-font{
-    font-weight:1 ;
-    height:100vh;
-    font-size: 10em;
-    display:grid;
-    place-content: center;
-    margin: 0;
-    text-align: center;
-    font-variation-settings: "opsz" 16, "wght" 100, "SOFT" 0, "WONK" 0;
-    transition: 
-        font-weight 500ms,
-        font-variation-settings 3s;
+@keyframes sizeVariations {
+  0%, 100% {
+    font-variation-settings: "opsz" 9, "wght" 400, "SOFT" 0, "WONK" 0;
+  }
+  50% {
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 0, "WONK" 0;
+  }
 }
 
-.variable-font:hover{
-    font-weight:500 ;
-    height:100vh;
-    font-size: 7em;
-    display:grid;
-    place-content: center;
-    margin: 0;
-    text-align: center;
-    font-variation-settings: "opsz" 16, "wght" 900, "SOFT" 100, "WONK" 1;
+.soft {
+  animation: softVariations 5s infinite ease-in-out;
+}
+
+@keyframes softVariations {
+  0%, 100% {
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 0, "WONK" 1;
+  }
+  50% {
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 100, "WONK" 1;
+  }
+}
+
+.wonk {
+  animation: wonkVariations 5s infinite ease-in-out;
+}
+
+@keyframes wonkVariations {
+  0%, 100% {
+    font-variation-settings: "opsz" 144, "wght" 100, "SOFT" 0, "WONK" 0;
+  }
+  50% {
+    font-variation-settings: "opsz" 144, "wght" 100, "SOFT" 0, "WONK" 1;
+  }
+}
+
+h5 {
+  font-size: 40px;
+  color: #FFC3C3;
+  margin: 15px 0;
 }
