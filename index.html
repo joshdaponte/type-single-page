@@ -11,62 +11,130 @@
 <body>
   <header>
     <h1 class="logo">Fraunces</h1>
+
     <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
+
     <nav class="page-nav">
       <ul>
-        <li><a href="#history">History</a></li>
-        <li><a href="#variations">Variations</a></li>
-        <li><a href="#alphabet">Full character set</a></li>
+        <li><a href="#history">history</a></li>
+        <li><a href="#variations">variations</a></li>
+        <li><a href="#alphabet">full character set</a></li>
       </ul>
     </nav>
+
     <label for="nav-checkbox" class="nav-checkbox-icon">
       <span></span>
     </label>
   </header>
 
   <section class="hero">
-    <h3>Fraunces</h3>
-    <h3>Fraunces</h3>
+    <p class="hero-kicker">Variable Serif Typeface</p>
+
+    <div class="hero-title">
+      <h2>Frau</h2>
+      <h2>nces</h2>
+    </div>
+
+    <div class="hero-subtitle">
+      <span>Phaedra Charles and Flavia Zimbardi</span>
+      <span>of Undercase Type</span>
+    </div>
   </section>
 
-  <section class="page-wrapper">
-    <section id="history">
-      <h2>History of the font</h2>
-      <p>
-        Fraunces is a contemporary serif typeface designed by Flavia Zimbardi and Phaedra Charles.
-        It started development in 2018 and was released in 2020 through Undercase Type. The design
-        pulls from early 20th-century display typography, especially the bold and expressive serif
-        styles seen in vintage advertising and editorial headlines. It is classified as a display serif,
-        meant for larger applications where personality and impact matter most. Fraunces stands out for
-        its variable font system, which allows designers to adjust axes like weight, optical size,
-        softness, and wonk. These changes let the typeface shift from sharp and high-contrast to softer
-        and more playful forms. It also supports a wide range of Latin-based languages, making it useful
-        across many contexts. Fraunces balances historical influence with modern flexibility, which is
-        why it works well in branding, web design, and editorial layouts.
-      </p>
-      <h4>Supported languages include:</h4>
-      <p>English, French, Spanish, Portuguese, German, Italian, and many other Latin-based languages.</p>
+  <main class="page-wrapper">
+    <div class="history-title-bar" id="history">
+      <h2>History</h2>
+    </div>
+
+    <section class="history-row">
+      <section class="history-content">
+        <p>
+          Fraunces is a contemporary serif typeface designed by Flavia
+          Zimbardi and Phaedra Charles. It started development in 2018 and
+          was released in 2020 through Undercase Type. The design pulls from
+          early 20th-century display typography, like bold, expressive serif
+          styles commonly seen in old advertising and editorial headlines.
+          It’s classified as a display serif, and meant for larger uses where
+          personality and impact is the intention. Fraunces stands out due to
+          its variable font system, where properties like weight, softness,
+          optical size, and contrast can be adjusted, shifting from sharp and
+          high-contrast to soft and more rounded. The typeface’s practicality
+          comes from its ability to support a wide range of Latin-based
+          languages. Fraunces is designed to balance historical influence with
+          modern flexibility, which is why it is suitable for distinctive
+          branding, web design, and editorial layouts.
+        </p>
+      </section>
+
+      <section id="variations">
+        <h3 class="weight">Weight</h3>
+        <h3 class="soft">Soft</h3>
+        <h3 class="size">Size</h3>
+        <h3 class="wonk">Wonk</h3>
+      </section>
     </section>
 
-    <section id="variations">
-      <h2>Variable Font Axes</h2>
-      <p>Fraunces has four variable axes:</p>
-      <h5 class="weight">Weight</h5>
-      <h5 class="size">Optical Size</h5>
-      <h5 class="soft">Soft</h5>
-      <h5 class="wonk">Wonk</h5>
+    <section id="wonk-display" aria-hidden="true">
+      <h2>Wonk</h2>
     </section>
 
     <section id="alphabet">
-      <h2>Full character set</h2>
-      <p>AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz</p>
-      <p>1234567890</p>
-      <p>!@#$%^&amp;*()</p>
+      <div class="alphabet-title-bar">
+        <h2>Character Set</h2>
+      </div>
+
+      <div class="alphabet-content">
+        <div class="alphabet-columns">
+          <div class="alphabet-column alphabet-light">
+            <p>abcdef</p>
+            <p>ghijkl</p>
+            <p>mnopq</p>
+            <p>rstuv</p>
+            <p>wxyz</p>
+          </div>
+
+          <div class="alphabet-column alphabet-regular">
+            <p>abcdef</p>
+            <p>ghijkl</p>
+            <p>mnopq</p>
+            <p>rstuv</p>
+            <p>wxyz</p>
+          </div>
+
+          <div class="alphabet-column alphabet-medium">
+            <p>abcdef</p>
+            <p>ghijkl</p>
+            <p>mnopq</p>
+            <p>rstuv</p>
+            <p>wxyz</p>
+          </div>
+
+          <div class="alphabet-column alphabet-bold">
+            <p>abcdef</p>
+            <p>ghijkl</p>
+            <p>mnopq</p>
+            <p>rstuv</p>
+            <p>wxyz</p>
+          </div>
+        </div>
+
+        <div class="alphabet-rows">
+          <p class="row-light">0123456789!@#$%^&amp;*()</p>
+          <p class="row-regular">0123456789!@#$%^&amp;*()</p>
+          <p class="row-bold">0123456789!@#$%^&amp;*()</p>
+        </div>
+      </div>
     </section>
-  </section>
+  </main>
 
   <footer>
-    Footer content goes here
+    <div class="download-bar">
+      <h2>Download</h2>
+    </div>
+
+    <p class="footer-credit">
+      Designed by Josh Daponte | University of MA, Dartmouth
+    </p>
   </footer>
 </body>
 </html>
