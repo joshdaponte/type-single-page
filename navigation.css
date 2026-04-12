@@ -2,18 +2,18 @@ header {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  padding: 0 1.5rem;
+  padding: 0 2.35rem;
   position: relative;
   z-index: 10;
 }
 
 .logo {
   margin: 0;
-  font-size: clamp(0.9rem, 1.2vw, 1.25rem);
+  font-size: clamp(0.95rem, 1.1vw, 1.2rem);
   line-height: 1;
   color: #FFC3C3;
   text-transform: uppercase;
-  letter-spacing: 0.08rem;
+  letter-spacing: 0.05rem;
 }
 
 .nav-checkbox {
@@ -31,7 +31,7 @@ header {
 .page-nav ul {
   list-style: none;
   display: flex;
-  gap: 3.25rem;
+  gap: 3.3rem;
   margin: 0;
   padding: 0;
 }
@@ -39,7 +39,7 @@ header {
 .page-nav a {
   text-decoration: none;
   color: #FFC3C3;
-  font-size: clamp(0.9rem, 1.15vw, 1.2rem);
+  font-size: clamp(0.95rem, 1.05vw, 1.15rem);
   line-height: 1;
   text-transform: uppercase;
 }
