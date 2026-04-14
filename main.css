@@ -66,17 +66,19 @@ header {
 
 .hero-kicker {
   position: absolute;
-  top: 17rem;
-  left: 70%;
-  transform: translateX(0);
+  top: 5.1rem;
+  left: 50%;
+  transform: translateX(-16%);
   margin: 0;
-  font-size: clamp(2.25rem, 1.55vw, 1.85rem);
-  letter-spacing: 0.4rem;
+  font-size: clamp(1.15rem, 1.45vw, 1.7rem);
+  letter-spacing: 0.42rem;
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
   color: #FFC3C3;
-  z-index: 2;
+  font-variation-settings: "opsz" 72, "wght" 700, "SOFT" 0, "WONK" 0;
+  animation: kickerChange 7s infinite ease-in-out;
+  z-index: 3;
 }
 
 .hero-title {
@@ -150,7 +152,7 @@ header {
 .history-title-bar h2 {
   font-size: clamp(8rem, 11vw, 12rem);
   line-height: 0.78;
-transform: translateX(-1.55rem) translateY(0.40rem);
+  transform: translateX(-1.55rem) translateY(0.40rem);
   position: relative;
   z-index: 3;
   font-variation-settings: "opsz" 144, "wght" 700, "SOFT" 0, "WONK" 0;
@@ -270,19 +272,19 @@ transform: translateX(-1.55rem) translateY(0.40rem);
 .row-light {
   font-size: clamp(2.6rem, 3.8vw, 4rem);
   font-variation-settings: "opsz" 72, "wght" 200, "SOFT" 0, "WONK" 0;
-  text-align: left;   /* stays left */
+  text-align: left;
 }
 
 .row-regular {
   font-size: clamp(2.85rem, 4.1vw, 4.35rem);
   font-variation-settings: "opsz" 72, "wght" 350, "SOFT" 0, "WONK" 0;
-  text-align: center; /* center this row */
+  text-align: center;
 }
 
 .row-bold {
   font-size: clamp(3.2rem, 4.6vw, 4.85rem);
   font-variation-settings: "opsz" 72, "wght" 900, "SOFT" 0, "WONK" 0;
-  text-align: right;  /* push this row right */
+  text-align: right;
 }
 
 footer {
@@ -343,11 +345,22 @@ footer {
 @keyframes heroChange {
   0%,
   100% {
-    font-variation-settings: "opsz" 144, "wght" 620, "SOFT" 0, "WONK" 0;
+    font-variation-settings: "opsz" 132, "wght" 720, "SOFT" 0, "WONK" 0;
   }
 
   50% {
-    font-variation-settings: "opsz" 144, "wght" 900, "SOFT" 100, "WONK" 1;
+    font-variation-settings: "opsz" 108, "wght" 800, "SOFT" 0, "WONK" 0.25;
+  }
+}
+
+@keyframes kickerChange {
+  0%,
+  100% {
+    font-variation-settings: "opsz" 72, "wght" 700, "SOFT" 0, "WONK" 0;
+  }
+
+  50% {
+    font-variation-settings: "opsz" 144, "wght" 700, "SOFT" 0, "WONK" 0;
   }
 }
 
@@ -401,8 +414,8 @@ footer {
   }
 
   .hero-kicker {
-    top: 7.2rem;
-    left: 49%;
+    top: 5rem;
+    transform: translateX(-12%);
     font-size: 1rem;
     letter-spacing: 0.22rem;
   }
@@ -469,8 +482,8 @@ footer {
   }
 
   .hero-kicker {
-    top: 4.8rem;
-    left: 46%;
+    top: 4.4rem;
+    transform: translateX(-10%);
     font-size: 0.72rem;
     letter-spacing: 0.08rem;
   }
