@@ -690,28 +690,28 @@ font-size: clamp(16rem, 17vw, 20rem);
   }
 
   .hero-title {
-    padding-top: 3.6rem;
+    padding-top: 5rem;
     grid-template-rows: auto auto;
   }
 
   .hero-title h2 {
-    font-size: clamp(18rem, 27vw, 20rem);
-       transform: translateX(-0.25rem);
-    line-height: 0.55;
+    font-size: clamp(14rem, 23vw, 16rem);
+    line-height: 0.6;
+    transform: translateX(0);
     animation: none;
     font-variation-settings: "opsz" 132, "wght" 760, "SOFT" 0, "WONK" 0;
   }
 
   .hero-line-1 {
     justify-self: center;
-    transform: translateX(-0.25rem);
+    transform: translateX(-0.15rem);
   }
 
   .hero-line-2 {
     justify-self: center;
     text-align: center;
-    transform: translateX(0.9rem);
-    margin-top: -0.45rem;
+    transform: translateX(0.5rem);
+    margin-top: -0.35rem;
     margin-bottom: 0;
     padding-right: 0;
   }
@@ -750,20 +750,27 @@ font-size: clamp(16rem, 17vw, 20rem);
   }
 
   #wonk-display {
-    min-height: 140px;
+    min-height: 165px;
   }
 
   .wonk-display-lockup {
     width: 100vw;
-    height: clamp(120px, 32vw, 180px);
+    height: 165px;
+  }
+
+  .wonk-display-image {
+    top: 35%;
+    left: 50%;
+    width: 128%;
+    transform: translate(-50%, -50%);
   }
 
   .wonk-display-n {
-    left: 65.3%;
-    top: 50.5%;
-    font-size: clamp(21rem, 16vw, 21rem);
+    left: 68.3%;
+    top: 40%;
+    font-size: clamp(18rem, 23vw, 20rem);
   }
-  
+
   .alphabet-content {
     padding: 2rem 0 2rem;
   }
@@ -785,15 +792,15 @@ font-size: clamp(16rem, 17vw, 20rem);
   }
 
   .download-bar {
-    min-height: 70px;
+    height: 45px;
+    min-height: 0;
   }
 
   .download-link {
-    font-size: clamp(5rem, 18vw, 8rem);
-    line-height: 0.85;
-    transform: translateY(-0.05rem);
+    font-size: clamp(3.2rem, 17vw, 8.8rem);
+    line-height: 0.72;
+    transform: translateY(0.12rem);
   }
-
 
   .footer-credit {
     padding: 1.5rem 1rem 0;
