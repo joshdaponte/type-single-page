@@ -123,9 +123,11 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   color: #6C345A;
+ letter-spacing: 0.2rem;
   font-size: clamp(3rem, 2.5vw, 4rem);
   font-weight: 900;
   line-height: 0.69;
+
   text-transform: uppercase;
   font-variation-settings: "opsz" 144, "wght" 900, "SOFT" 0, "WONK" 0;
   position: relative;
