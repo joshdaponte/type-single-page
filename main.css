@@ -138,11 +138,11 @@ header {
 }
 
 .hero-subtitle span:first-child {
-  left: 1rem;
+  left: -0.5rem;
 }
 
 .hero-subtitle span:last-child {
-  right: 1rem;
+  right: -0.2rem;
 }
 
 .history-title-bar {
