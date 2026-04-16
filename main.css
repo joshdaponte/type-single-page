@@ -286,64 +286,162 @@ header {
 
 .alphabet-columns {
   display: grid;
-  grid-template-columns: repeat(4, max-content);
-  justify-content: space-between;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 3rem;
   padding: 0 2rem;
+  align-items: start;
+}
+
+.alphabet-column {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .alphabet-column p {
+  margin: 0;
   font-size: clamp(2.1rem, 3vw, 3.2rem);
-  line-height: 1.32;
-
+  line-height: 1.05;
 }
+
 
 .alphabet-light p {
-  font-variation-settings: "opsz" 144, "wght" 100, "SOFT" 0, "WONK" 1;
-      letter-spacing: 0.5em;
+  letter-spacing: 0.5em;
+  text-align: left;
+  animation: columnWeight 6s infinite ease-in-out;
 }
+
 
 .alphabet-regular p {
-  font-variation-settings: "opsz" 110, "wght" 350, "SOFT" 0, "WONK" 0;
-      letter-spacing: 0.4em;
-       text-align: center;
+  letter-spacing: 0.4em;
+  text-align: center;
+  animation: columnOpsz 6s infinite ease-in-out;
 }
+
 
 .alphabet-medium p {
-  font-variation-settings: "opsz" 60, "wght" 700, "SOFT" 0, "WONK" 0;
-      letter-spacing: 0.3em;
-      text-align: center;
+  letter-spacing: 0.3em;
+  text-align: center;
+  animation: columnWonk 6s infinite ease-in-out;
 }
 
+
 .alphabet-bold p {
-  font-variation-settings: "opsz" 9, "wght" 900, "SOFT" 100, "WONK" 0;
-      letter-spacing: 0.1em;
-      text-align: right;
+  letter-spacing: 0.1em;
+  text-align: right;
+  animation: columnSoft 6s infinite ease-in-out;
 }
 
 .alphabet-rows {
-  margin-top: 2.75rem;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   gap: 1.65rem;
+  padding: 0 2rem;
 }
+
+.alphabet-rows p {
+  margin: 0;
+}
+
 
 .row-light {
   font-size: clamp(2.6rem, 3.8vw, 4rem);
-  font-variation-settings: "opsz" 144, "wght" 200, "SOFT" 0, "WONK" 0;
+  line-height: 1.1;
   text-align: left;
+  animation: opszLightPulse 4.5s infinite ease-in-out;
 }
 
 .row-regular {
   font-size: clamp(2.85rem, 4.1vw, 4.35rem);
-  font-variation-settings: "opsz" 72, "wght" 350, "SOFT" 0, "WONK" 0;
+  line-height: 1.1;
   text-align: center;
+  animation: opszRegularPulse 4.5s infinite ease-in-out;
 }
 
 .row-bold {
   font-size: clamp(3.2rem, 4.6vw, 4.85rem);
-  font-variation-settings: "opsz" 9, "wght" 900, "SOFT" 100, "WONK" 0;
+  line-height: 1.1;
   text-align: right;
+  animation: opszBoldPulse 4.5s infinite ease-in-out;
+}
+
+@keyframes columnWeight {
+  0%,
+  100% {
+    font-variation-settings: "opsz" 120, "wght" 100, "SOFT" 0, "WONK" 0;
+  }
+
+  50% {
+    font-variation-settings: "opsz" 140, "wght" 350, "SOFT" 0, "WONK" 0;
+  }
+}
+
+@keyframes columnOpsz {
+  0%,
+  100% {
+    font-variation-settings: "opsz" 60, "wght" 350, "SOFT" 0, "WONK" 0;
+  }
+
+  50% {
+    font-variation-settings: "opsz" 120, "wght" 350, "SOFT" 0, "WONK" 0;
+  }
+}
+
+@keyframes columnWonk {
+  0%,
+  100% {
+    font-variation-settings: "opsz" 80, "wght" 700, "SOFT" 0, "WONK" 0;
+  }
+
+  50% {
+    font-variation-settings: "opsz" 110, "wght" 700, "SOFT" 0, "WONK" 1;
+  }
+}
+
+@keyframes columnSoft {
+  0%,
+  100% {
+    font-variation-settings: "opsz" 40, "wght" 900, "SOFT" 0, "WONK" 0;
+  }
+
+  50% {
+    font-variation-settings: "opsz" 70, "wght" 900, "SOFT" 100, "WONK" 0;
+  }
+}
+
+@keyframes opszLightPulse {
+  0%,
+  100% {
+    font-variation-settings: "opsz" 9, "wght" 200, "SOFT" 0, "WONK" 0;
+  }
+
+  50% {
+    font-variation-settings: "opsz" 144, "wght" 200, "SOFT" 0, "WONK" 0;
+  }
+}
+
+@keyframes opszRegularPulse {
+  0%,
+  100% {
+    font-variation-settings: "opsz" 9, "wght" 350, "SOFT" 0, "WONK" 0;
+  }
+
+  50% {
+    font-variation-settings: "opsz" 144, "wght" 350, "SOFT" 0, "WONK" 0;
+  }
+}
+
+@keyframes opszBoldPulse {
+  0%,
+  100% {
+    font-variation-settings: "opsz" 9, "wght" 900, "SOFT" 100, "WONK" 0;
+  }
+
+  50% {
+    font-variation-settings: "opsz" 144, "wght" 900, "SOFT" 100, "WONK" 0;
+  }
 }
 
 footer {
@@ -355,7 +453,7 @@ footer {
 }
 
 .download-bar {
-  min-height: 210px;
+  height: 210px; 
   background-image: url("assets/downloadbuttonbackground.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -367,8 +465,8 @@ footer {
 }
 
 .download-link {
-  font-size: clamp(15rem, 16vw, 19rem);
-  line-height: 0.7;
+font-size: clamp(16rem, 17vw, 20rem);
+  line-height: 0.72; 
   color: #311A25;
   text-transform: uppercase;
   text-decoration: none;
@@ -377,8 +475,8 @@ footer {
   font-family: "Fraunces", serif;
   font-variation-settings: "opsz" 144, "wght" 700, "SOFT" 0, "WONK" 0;
 
-  transform: translateY(-0.2rem);
-  transition: all 0.25s ease;
+  transform: translateY(0.6rem); 
+  transition: font-variation-settings 0.25s ease, color 0.25s ease;
 }
 
 .download-link:hover {
@@ -386,18 +484,30 @@ footer {
 
   font-variation-settings: "opsz" 144, "wght" 900, "SOFT" 40, "WONK" 0;
 
-  transform: translateY(-0.3rem);
+
 }
 
 .footer-credit {
   text-align: center;
   padding-top: 3rem;
-  font-size: clamp(1rem, 1.4vw, 1.55rem);
+  font-size: clamp(0.8rem, 1.4vw, 0.85rem);
   line-height: 1.1;
   letter-spacing: 0.35rem;
   text-transform: uppercase;
   color: #FFC3C3;
 }
+
+.footer-credit a {
+  color: #FFC3C3;
+  text-decoration: none;
+}
+
+.footer-credit a:hover {
+  color: #833867;
+  text-decoration: none;
+}
+
+
 
 .weight {
   animation: weightVariations 5s infinite ease-in-out;
